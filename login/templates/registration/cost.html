@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block title %}User Registration{% endblock %}
+{% block head %}User Registration{% endblock %}
+{% block content %}
+    <form action="{% url 'login:cost' %}" method="post">{% csrf_token %}
+		<p><label for="id_subject">Name:</label>
+			<input id="id_subject" type="text" name="subject" maxlength="100" /></p>
+		<p><label for="id_message">Address:</label>
+			<textarea name="message" id="id_message"></textarea></p>
+		<p><label for="id_sender">About:</label>
+			<input type="text" name="sender" id="id_sender" /></p>
+		
+	</form>
+    
+{% endblock %}
